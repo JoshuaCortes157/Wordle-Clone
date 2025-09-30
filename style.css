@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.theme-classic {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body.theme-dark {
+  background-color: #121213;
+  color: #ffffff;
+}
+
+body.theme-ocean {
+  background: linear-gradient(135deg, #3e5ad6 0%, #764ba2 100%);
+  color: #ffffff;
+}
+
+body.theme-forest {
+  background: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+  color: #ffffff;
+}
+
+body.theme-sunset {
+  background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  color: #2d3436;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+  flex-wrap: wrap;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+select, button, input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button {
+  background-color: #6aaa64;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.theme-dark select, .theme-dark input {
+  background-color: #2d2d2d;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.theme-dark button {
+  background-color: #538d4e;
+}
+
+.stats {
+  text-align: center;
+  margin: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+#game-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter-box {
+  border: 2px solid gray;
+  border-radius: 3px;
+  margin: 2px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  height: 3rem;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.filled-box {
+  border: 2px solid black;
+}
+
+.theme-dark .filled-box {
+  border-color: #565758;
+}
+
+.letter-row {
+  display: flex;
+}
+
+#keyboard-cont {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#keyboard-cont div {
+  display: flex;
+}
+
+.second-row {
+  margin: 0.5rem 0;
+}
+
+.keyboard-button {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  margin: 0 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background-color: #d3d6da;
+  transition: all 0.2s;
+}
+
+.keyboard-button:hover {
+  transform: scale(1.05);
+}
+
+.theme-dark .keyboard-button {
+  background-color: #818384;
+  color: #ffffff;
+}
+
+#answer-display {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#answer-display .letter-box {
+  background-color: #6aaa64;
+  color: white;
+  border-color: #6aaa64;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.theme-dark .modal-content {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+}
+
+.modal-content textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  font-size: 1rem;
+  resize: vertical;
+  font-family: monospace;
+}
+
+.theme-dark .modal-content textarea {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.theme-dark .close:hover {
+  color: #fff;
+}
