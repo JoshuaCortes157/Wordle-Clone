@@ -1,7 +1,8 @@
 {
   "name": "Wordle Clone",
   "short_name": "Wordle",
-  "start_url": "./index.html",
+  "start_url": "/Wordle-Clone/index.html",
+  "scope": "/Wordle-Clone/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#4caf50",
@@ -16,5 +17,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-]
+  ]
 }
